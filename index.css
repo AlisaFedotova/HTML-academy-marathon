@@ -1,4 +1,114 @@
+:root {
+    --font-color: #533738;
+    --background-color-brown: #8d7370;
+    --background-color-peach: #e2c4ba;
+    --montserrat: 'Montserrat', sans-serif;
+
+}
+
 body {
-    background: #E5E5E5;
-    font-family: Montserrat sans-serif;
+    background: #e5e5e5;
+    font-family: var(--montserrat);
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: var(--font-color);
+}
+
+main {
+    background: url("files/main-banner.jpg") top center no-repeat;
+}
+
+section {
+    padding: 1rem 4rem;
+}
+
+.logo {
+    position: relative;
+    right: -25px;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    width: 26px;
+    height: 25px;
+    background: url("files/scandi-icon.svg");
+}
+
+
+nav {
+    text-transform: capitalize;
+}
+
+.wrapper {
+    width: 50%;
+    padding: 2em 3em;
+}
+
+/*-------------------------- Interface elements --------------------------*/
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.button {
+    margin: 0;
+    border: 0;
+    padding: 25px 65px;
+    background-color: #cc8b86;
+    font-size: 1.2rem;
+    color: var(--font-color);
+    font-family: var(--montserrat);
+}
+
+input {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.6rem 0;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+}
+
+input::-webkit-input-placeholder {
+    color: #f6ede9;
+    font-family: var(--montserrat);
+}
+
+h1 {
+    font-size: 3.1em;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*-------------------------- CSS classes --------------------------*/
+.text-align-left {
+    text-align: left;
+}
+
+.bg-brown {
+    background-color: var(--background-color-brown);
+    color: #fff;
+}
+
+.bg-peach {
+    background-color: var(--background-color-peach);
 }
