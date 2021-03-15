@@ -3,7 +3,6 @@
     --background-color-brown: #8d7370;
     --background-color-peach: #e2c4ba;
     --montserrat: 'Montserrat', sans-serif;
-
 }
 
 body {
@@ -15,31 +14,44 @@ body {
     color: var(--font-color);
 }
 
-main {
-    background: url("files/main-banner.jpg") top center no-repeat;
-}
-
 section {
     padding: 1rem 4rem;
 }
 
+section.main {
+    background: url("files/main-banner.jpg") top center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 2rem;
+}
+
 .logo {
+    float: left;
+}
+
+.logo img {
     position: relative;
-    right: -25px;
+    top: 5px;
 }
-
-.logo::before {
-    content: '';
-    position: absolute;
-    left: -25px;
-    width: 26px;
-    height: 25px;
-    background: url("files/scandi-icon.svg");
-}
-
 
 nav {
     text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    margin: 0 0.5rem;
 }
 
 .wrapper {
@@ -56,6 +68,10 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+a:focus {
+    outline: none;
 }
 
 .button {
@@ -80,6 +96,10 @@ input {
 input::-webkit-input-placeholder {
     color: #f6ede9;
     font-family: var(--montserrat);
+}
+
+input:focus {
+    outline: none;
 }
 
 h1 {
