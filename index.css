@@ -12,6 +12,7 @@ body {
     box-sizing: border-box;
     font-size: 1rem;
     color: var(--font-color);
+    line-height: 2rem;
 }
 
 section {
@@ -24,6 +25,11 @@ section.main {
     height: 100vh;
 }
 
+.main .wrapper {
+    position: absolute;
+    top: calc(50% - 250px);
+}
+
 header {
     position: fixed;
     top: 0;
@@ -33,6 +39,7 @@ header {
     justify-content: space-around;
     align-items: baseline;
     padding: 2rem;
+    z-index: 10;
 }
 
 .logo {
@@ -59,6 +66,10 @@ nav a {
     padding: 2em 3em;
 }
 
+.portfolio img {
+    width: 100%;
+}
+
 /*-------------------------- Interface elements --------------------------*/
 
 a {
@@ -75,13 +86,20 @@ a:focus {
 }
 
 .button {
+    display: block;
+    width: fit-content;
     margin: 0;
     border: 0;
     padding: 25px 65px;
     background-color: #cc8b86;
     font-size: 1.2rem;
+    font-weight: 600;
     color: var(--font-color);
     font-family: var(--montserrat);
+}
+
+button:focus {
+    outline: none;
 }
 
 input {
@@ -104,19 +122,42 @@ input:focus {
 
 h1 {
     font-size: 3.1em;
+    font-weight: 400;
+    line-height: 4rem;
 }
 
 h2 {
     font-size: 2.5em;
     text-align: center;
+    font-weight: 400;
+    line-height: 3rem;
+    text-transform: uppercase;
 }
 
 h3 {
     font-size: 1.8em;
+    font-weight: 400;
+    line-height: 3rem;
 }
 
-button:focus {
-    outline: none;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 4rem 0;
+    justify-content: space-between;
+}
+
+li {
+    font-size: 3.1rem;
+    line-height: 3.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+li span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2rem;
 }
 
 /*-------------------------- CSS classes --------------------------*/
@@ -131,4 +172,20 @@ button:focus {
 
 .bg-peach {
     background-color: var(--background-color-peach);
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.flex {
+    display: flex;
+}
+
+.hidden {
+    visibility: hidden;
 }
