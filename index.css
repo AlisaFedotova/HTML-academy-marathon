@@ -31,7 +31,7 @@ section.main {
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -66,8 +66,53 @@ nav a {
     padding: 2em 3em;
 }
 
-.portfolio img {
-    width: 100%;
+.portfolio-item {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    height: 60vh;
+    margin: 15px 10px;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-item img {
+    object-fit: cover;
+}
+
+.portfolio-item .description {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    visibility: hidden;
+    background: rgba(100, 72, 69, 0.8);
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.portfolio-item:hover .description {
+    visibility: visible;
+}
+
+.portfolio-item h3 {
+    text-align: center;
+}
+
+.arrow {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.arrow a {
+    cursor: pointer;
 }
 
 /*-------------------------- Interface elements --------------------------*/
