@@ -2,6 +2,7 @@
     --font-color: #533738;
     --background-color-brown: #8d7370;
     --background-color-peach: #e2c4ba;
+    --background-color-pink: #cc8b86;
     --montserrat: 'Montserrat', sans-serif;
 }
 
@@ -20,7 +21,7 @@ section {
 }
 
 section.main {
-    background: url("files/main-banner.jpg") top center no-repeat;
+    background: url("/files/main-banner.jpg") top center no-repeat;
     background-size: cover;
     height: 100vh;
 }
@@ -64,6 +65,22 @@ nav a {
 .wrapper {
     width: 50%;
     padding: 2em 3em;
+}
+
+.achieves ul {
+    justify-content: space-around;
+}
+
+.achieves li {
+    font-size: 3.1rem;
+    line-height: 3.8rem;
+    text-transform: uppercase;
+}
+
+.achieves li span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2rem;
 }
 
 .portfolio-item {
@@ -115,6 +132,59 @@ nav a {
     cursor: pointer;
 }
 
+.teem-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    width: 30%;
+}
+
+figure img {
+    width: 100%;
+}
+
+.workflow ul {
+    justify-content: space-between;
+}
+
+.workflow li {
+    position: relative;
+    width: 20%;
+    margin-top: 60px;
+}
+
+.workflow li::before {
+    content: '1';
+    position: absolute;
+    top: -60px;
+    right: calc(50% - 50px / 2);
+    width: 30px;
+    height: 30px;
+    background: var(--background-color-brown);
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+}
+
+.workflow li:nth-child(1)::before {
+    content: "1";
+}
+
+.workflow li:nth-child(2)::before {
+    content: "2";
+}
+
+.workflow li:nth-child(3)::before {
+    content: "3";
+}
+
+.workflow li:nth-child(4)::before {
+    content: "4";
+}
+
+
 /*-------------------------- Interface elements --------------------------*/
 
 a {
@@ -130,13 +200,17 @@ a:focus {
     outline: none;
 }
 
+p {
+    margin-block-end: 1.5rem;
+}
+
 .button {
     display: block;
     width: fit-content;
     margin: 0;
     border: 0;
     padding: 25px 65px;
-    background-color: #cc8b86;
+    background-color: var(--background-color-pink);
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--font-color);
@@ -186,6 +260,7 @@ h3 {
 }
 
 ul {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 4rem 0;
@@ -193,16 +268,13 @@ ul {
 }
 
 li {
-    font-size: 3.1rem;
-    line-height: 3.8rem;
     text-align: center;
-    text-transform: uppercase;
 }
 
-li span {
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 2rem;
+
+cite {
+    text-transform: uppercase;
+    font-style: normal;
 }
 
 /*-------------------------- CSS classes --------------------------*/
@@ -233,4 +305,13 @@ li span {
 
 .hidden {
     visibility: hidden;
+}
+
+/*-------------------------- Slick styles --------------------------*/
+
+
+.slick-prev::before, .slick-next::before {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
