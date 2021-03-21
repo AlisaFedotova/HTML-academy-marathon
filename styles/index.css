@@ -1,8 +1,12 @@
 :root {
     --font-color: #533738;
-    --background-color-brown: #8d7370;
-    --background-color-peach: #e2c4ba;
-    --background-color-pink: #cc8b86;
+    --font-color-hover: #7b5254;
+    --brown: #8d7370;
+    --brown-hover: #a58783;
+    --peach: #e2c4ba;
+    --peach-hover: #fdc1af;
+    --pink: #cc8b86;
+    --pink-hover: #ee9f99;
     --montserrat: 'Montserrat', sans-serif;
 }
 
@@ -162,7 +166,7 @@ figure img {
     right: calc(50% - 50px / 2);
     width: 30px;
     height: 30px;
-    background: var(--background-color-brown);
+    background: var(--brown);
     border-radius: 50%;
     color: white;
     padding: 10px;
@@ -197,6 +201,11 @@ figure img {
     margin: -1rem 0;
 }
 
+.application p {
+    font-size: 1.1rem;
+
+}
+
 footer {
     padding: 2rem 4rem;
 }
@@ -218,6 +227,7 @@ a {
 
 a:hover {
     text-decoration: none;
+    color: var(--font-color-hover);
 }
 
 a:focus {
@@ -234,15 +244,20 @@ p {
     margin: 0;
     border: 0;
     padding: 25px 65px;
-    background-color: var(--background-color-pink);
+    background-color: var(--pink);
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--font-color);
     font-family: var(--montserrat);
+    transition: all .15s ease-in-out;
 }
 
 button:focus {
     outline: none;
+}
+
+.button:hover {
+    background-color: var(--pink-hover);
 }
 
 input {
@@ -252,11 +267,14 @@ input {
     border: none;
     border-bottom: 1px solid #ffffff;
     background: transparent;
+    font-size: 1.1rem;
+    color: white;
 }
 
 input::-webkit-input-placeholder {
     color: #f6ede9;
     font-family: var(--montserrat);
+    font-size: 1.1rem;
 }
 
 input:focus {
@@ -307,12 +325,12 @@ cite {
 }
 
 .bg-brown {
-    background-color: var(--background-color-brown);
+    background-color: var(--brown);
     color: #fff;
 }
 
 .bg-peach {
-    background-color: var(--background-color-peach);
+    background-color: var(--peach);
 }
 
 .float-left {
@@ -335,10 +353,11 @@ cite {
 /*-------------------------- Slick styles --------------------------*/
 
 .slick-prev, .slick-next {
-    background-color: var(--background-color-pink);
+    background-color: var(--pink);
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    transition: all .15s ease-in-out;
 }
 
 .slick-prev::before {
@@ -350,5 +369,5 @@ cite {
 }
 
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
-    background-color: var(--background-color-pink);
+    background-color: var(--pink-hover);
 }
